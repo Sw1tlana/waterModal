@@ -1,19 +1,14 @@
 
 import './App.css'
-import WaterForm from './componenets/WaterForm.jsx';
+import WaterModal from './componenets/WaterModal/WaterModal.jsx';
+
+
 function App() {
 
-   const defaultValues = {
-        waterAmount: 50,
-        time: new Date().toLocaleTimeString(),
-        keyboardAmount: 50
-    };
 
   return (
     <>
-      
-    <WaterForm defaultValues={defaultValues} />
-   
+    <WaterModal operationType="edit" />
     </>
   )
 }
