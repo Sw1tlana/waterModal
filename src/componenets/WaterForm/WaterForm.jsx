@@ -1,7 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import PropTypes from 'prop-types';
 import axios from 'axios'; 
 
 const schemaWater = yup.object().shape({
@@ -39,18 +38,16 @@ const WaterForm = () => {
 
     const onSubmit = async (formData) => {
         try {
-            // Ось деякі дії, які ви хочете виконати перед відправкою даних (необов'язково)
             console.log('Submitting data:', formData);
 
-            // Симуляція відправки даних на сервер
             const response = await axios.post('https://jsonplaceholder.typicode.com/posts', formData);
 
-            // Ось деякі дії, які ви хочете виконати після успішної відправки даних (необов'язково)
+           
             console.log('Server response:', response.data);
-            alert('Data successfully submitted!'); // Повідомлення про успішну відправку
+            alert('Data successfully submitted!')
         } catch (error) {
             console.error('Error sending data:', error);
-            alert('Error submitting data. Please try again.'); // Повідомлення про помилку
+            alert('Error submitting data. Please try again.')
         }
     };
 
@@ -122,11 +119,6 @@ const decrementWater = () => {
         </form>
     </div>
 );
-};
-
-WaterForm.propTypes = {
-    defaultValues: PropTypes.object,
-    operationType: PropTypes.oneOf(['add', 'edit']).isRequired,
 };
 
 export default WaterForm;
