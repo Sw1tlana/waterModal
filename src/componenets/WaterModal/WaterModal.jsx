@@ -8,7 +8,7 @@ const header = operationType === 'add' ? 'Add water' : 'Edit the entered amount 
 const subHeader = operationType === 'add' ? 'Choose a value:' : 'Correct entered data:';
     
   return (
-      <div>
+    <div>
       <h2>{header}</h2>
       <p>{subHeader}</p>
           <WaterForm operationType={operationType} />  

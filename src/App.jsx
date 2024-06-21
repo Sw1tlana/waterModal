@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <WaterModal operationType="edit" />
+    <WaterModal operationType="add" />
     </>
   )
 }
